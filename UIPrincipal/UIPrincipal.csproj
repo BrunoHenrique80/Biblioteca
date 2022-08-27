@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF77A5DB-EFD0-4F9C-B8A7-4565D68304EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UIPrincipal</RootNamespace>
+    <AssemblyName>UIPrincipal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Designbolts-Free-Multimedia-IMac.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormulariosSelecao\FormCadastroAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroAutor.Designer.cs">
+      <DependentUpon>FormCadastroAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroCategoria.Designer.cs">
+      <DependentUpon>FormCadastroCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroEditora.Designer.cs">
+      <DependentUpon>FormCadastroEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroLeitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroLeitor.Designer.cs">
+      <DependentUpon>FormCadastroLeitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormCadastroLivro.Designer.cs">
+      <DependentUpon>FormCadastroLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormDashboard.Designer.cs">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEmprestimo.Designer.cs">
+      <DependentUpon>FormSelecionarEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEstado.Designer.cs">
+      <DependentUpon>FormSelecionarEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarCidade.Designer.cs">
+      <DependentUpon>FormSelecionarCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarEditora.Designer.cs">
+      <DependentUpon>FormSelecionarEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarAutor.Designer.cs">
+      <DependentUpon>FormSelecionarAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarCategoria.Designer.cs">
+      <DependentUpon>FormSelecionarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarLeitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarLeitor.Designer.cs">
+      <DependentUpon>FormSelecionarLeitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosSelecao\FormSelecionarLivro.Designer.cs">
+      <DependentUpon>FormSelecionarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormAutor.Designer.cs">
+      <DependentUpon>FormAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormCategoria.Designer.cs">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormEditora.Designer.cs">
+      <DependentUpon>FormEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormEmprestimo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormEmprestimo.Designer.cs">
+      <DependentUpon>FormEmprestimo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLeitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLeitor.Designer.cs">
+      <DependentUpon>FormLeitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormLivro.Designer.cs">
+      <DependentUpon>FormLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormDevolucao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormDevolucao.Designer.cs">
+      <DependentUpon>FormDevolucao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormulariosSelecao\FormCadastroAutor.resx">
+      <DependentUpon>FormCadastroAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormCadastroCategoria.resx">
+      <DependentUpon>FormCadastroCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormCadastroEditora.resx">
+      <DependentUpon>FormCadastroEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormCadastroLeitor.resx">
+      <DependentUpon>FormCadastroLeitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormCadastroLivro.resx">
+      <DependentUpon>FormCadastroLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormDashboard.resx">
+      <DependentUpon>FormDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarEmprestimo.resx">
+      <DependentUpon>FormSelecionarEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarEstado.resx">
+      <DependentUpon>FormSelecionarEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarCategoria.aa-DJ.resx">
+      <DependentUpon>FormSelecionarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarCidade.resx">
+      <DependentUpon>FormSelecionarCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarEditora.resx">
+      <DependentUpon>FormSelecionarEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarAutor.resx">
+      <DependentUpon>FormSelecionarAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarCategoria.resx">
+      <DependentUpon>FormSelecionarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarLeitor.resx">
+      <DependentUpon>FormSelecionarLeitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosSelecao\FormSelecionarLivro.resx">
+      <DependentUpon>FormSelecionarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormAutor.resx">
+      <DependentUpon>FormAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormCategoria.resx">
+      <DependentUpon>FormCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormEditora.resx">
+      <DependentUpon>FormEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormEmprestimo.resx">
+      <DependentUpon>FormEmprestimo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLeitor.resx">
+      <DependentUpon>FormLeitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormLivro.resx">
+      <DependentUpon>FormLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormDevolucao.resx">
+      <DependentUpon>FormDevolucao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Model.Autor.datasource" />
+    <None Include="Properties\DataSources\Model.Categoria.datasource" />
+    <None Include="Properties\DataSources\Model.Cidade.datasource" />
+    <None Include="Properties\DataSources\Model.Devolucao.datasource" />
+    <None Include="Properties\DataSources\Model.Editora.datasource" />
+    <None Include="Properties\DataSources\Model.Emprestimo.datasource" />
+    <None Include="Properties\DataSources\Model.Estado.datasource" />
+    <None Include="Properties\DataSources\Model.Leitor.datasource" />
+    <None Include="Properties\DataSources\Model.Livro.datasource" />
+    <None Include="Properties\DataSources\Model.Usuario.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{F31DF06D-6931-48B7-B562-DB952E3D4C3D}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{EE026B64-5C4C-483A-AFDF-F2B36B12B531}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infra\Infra.csproj">
+      <Project>{0bab0dbc-0fb6-49a5-a707-3c5c1763e9b5}</Project>
+      <Name>Infra</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{88c6afce-999a-4ff1-9833-10e61420cf30}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Designbolts-Free-Multimedia-IMac.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
